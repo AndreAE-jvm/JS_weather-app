@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="city-search" placeholder="Search for a city...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" data-tab="today">Today</button>
+            <button class="tab" data-tab="forecast">5-Day Forecast</button>
+        </div>
+        
+        <div id="today" class="tab-content active">
+            <div class="current-weather">
+                <h2 id="current-city">Loading...</h2>
+                <div class="current-main">
+                    <div class="current-date" id="current-date">--</div>
+                    <div class="current-icon">
+                        <img id="current-weather-icon" src="" alt="">
+                        <span id="current-description">--</span>
+                    </div>
+                    <div class="current-temp">
+                        <span id="current-temp">--</span>°C
+                        <div class="feels-like">Feels like: <span id="current-feels-like">--</span>°C</div>
+                    </div>
+                    <div class="current-sun">
+                        <div><i class="fas fa-sunrise"></i> Sunrise: <span id="sunrise">--:--</span></div>
+                        <div><i class="fas fa-sunset"></i> Sunset: <span id="sunset">--:--</span></div>
+                        <div>Daylight: <span id="daylight">--h --m</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hourly-forecast">
+                <h3>Hourly Forecast</h3>
+                <div class="hourly-container" id="hourly-container"></div>
+            </div>
+            
+            <div class="nearby-cities">
+                <h3>Nearby Cities</h3>
+                <div class="nearby-container" id="nearby-container"></div>
+            </div>
+        </div>
+        
+        <div id="forecast" class="tab-content">
+            <div class="daily-forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="daily-container" id="daily-container"></div>
+            </div>
+            
+            <div class="selected-day-forecast">
+                <h3 id="selected-day-title">Today's Hourly Forecast</h3>
+                <div class="selected-hourly-container" id="selected-hourly-container"></div>
+            </div>
+        </div>
+        
+        <div id="error-page" class="error-page">
+            <h2>404 - City Not Found</h2>
+            <p>The city you searched for could not be found. Please try another location.</p>
+            <button id="go-back-btn">Go Back</button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

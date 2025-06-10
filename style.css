@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#city-search {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #3367d6;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab.active {
+    color: #4285f4;
+    border-bottom: 3px solid #4285f4;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.current-weather {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.current-weather h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.current-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.current-date {
+    font-size: 18px;
+    color: #666;
+    width: 100%;
+}
+
+.current-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.current-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.current-temp {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.current-temp .feels-like {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+}
+
+.current-sun {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #666;
+}
+
+.current-sun i {
+    margin-right: 5px;
+    color: #f39c12;
+}
+
+.hourly-forecast, .nearby-cities, .daily-forecast, .selected-day-forecast {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hourly-container, .nearby-container, .daily-container, .selected-hourly-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.hourly-card, .nearby-card, .daily-card {
+    min-width: 120px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.hourly-card {
+    min-width: 150px;
+}
+
+.daily-card {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.daily-card:hover, .daily-card.selected {
+    background-color: #e3f2fd;
+    transform: translateY(-3px);
+}
+
+.hourly-card img, .nearby-card img, .daily-card img {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+}
+
+.hourly-card .time, .nearby-card .city-name, .daily-card .day {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hourly-card .temp, .nearby-card .temp, .daily-card .temp {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.hourly-card .feels-like, .hourly-card .wind {
+    font-size: 12px;
+    color: #666;
+}
+
+.error-page {
+    display: none;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.error-page h2 {
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+#go-back-btn {
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .current-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .current-sun {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .hourly-card, .daily-card {
+        min-width: 100px;
+    }
+}
