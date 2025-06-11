@@ -21,7 +21,7 @@
 
 2. Зарегистрироваться на OpenWeatherMap
 
-В файле modules/weatherService.js API_KEY = 'c6582377d89d09d75cc49fa3e00ffb04'; ключ
+В файле modules/weatherService.js API_KEY = 'Ваш API'; ключ
 
 
 ## Структура проекта

@@ -1,4 +1,4 @@
-export const API_KEY = 'c6582377d89d09d75cc49fa3e00ffb04';
+export const API_KEY = 'Ваш API';
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const GEOCODING_URL = 'https://api.openweathermap.org/geo/1.0/direct';
 export const REVERSE_GEOCODING_URL = 'https://api.openweathermap.org/geo/1.0/reverse';
