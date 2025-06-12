@@ -7,6 +7,7 @@ import {
 
 
 let currentCity = 'Moscow';
+    // Set up event listeners
     const citySearch = document.getElementById('city-search');
     const searchBtn = document.getElementById('search-btn');
     const tabs = document.querySelectorAll('.tab');

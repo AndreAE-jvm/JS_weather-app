@@ -1,4 +1,4 @@
-export const API_KEY = 'c6582377d89d09d75cc49fa3e00ffb04';
+export const API_KEY = 'Ваш API';
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const GEOCODING_URL = 'https://api.openweathermap.org/geo/1.0/direct';
 export const REVERSE_GEOCODING_URL = 'https://api.openweathermap.org/geo/1.0/reverse';
@@ -28,12 +28,6 @@ export async function fetchWeatherData(city, lat, lon) {
         }
 
         const { lat: cityLat, lon: cityLon, name } = geoData[0];
-        // const [current, forecast] = await Promise.all([
-        //     fetch(`${BASE_URL}/weather?lat=${cityLat}&lon=${cityLon}&units=metric&appid=${API_KEY}`)
-        //         .then(res => res.json()),
-        //     fetch(`${BASE_URL}/forecast?lat=${cityLat}&lon=${cityLon}&units=metric&appid=${API_KEY}`)
-        //         .then(res => res.json())
-        // ]);
 
         return { current, forecast, coords: { lat: cityLat, lon: cityLon } };
     } catch (error) {
