@@ -1,4 +1,6 @@
 # Weather Forecast App
+![alt text](image.png)
+![alt text](image-1.png)
 
 Приложение для просмотра текущей погоды и прогноза на 5 дней с использованием OpenWeatherMap API.
 

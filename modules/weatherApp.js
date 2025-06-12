@@ -6,7 +6,7 @@ import {
   updateDailyForecast, 
   updateNearbyCities, 
   showErrorPage 
-} from '../uiManager.js';
+} from './uiManager.js';
 
 const DEFAULT_CITY = 'Moscow';
 let currentCity = DEFAULT_CITY;

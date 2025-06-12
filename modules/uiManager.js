@@ -7,13 +7,17 @@ import {
 
 
 let currentCity = 'Moscow';
-
-export function setupUI(onCitySearch, onTabSwitch, onGoBack) {
-    // Set up event listeners
     const citySearch = document.getElementById('city-search');
     const searchBtn = document.getElementById('search-btn');
     const tabs = document.querySelectorAll('.tab');
-    const goBackBtn = document.getElementById('go-back-btn');
+    const goBackBtn = document.getElementById('go-back-btn')
+
+export function setupUI(onCitySearch, onTabSwitch, onGoBack) {
+    // Set up event listeners
+    // const citySearch = document.getElementById('city-search');
+    // const searchBtn = document.getElementById('search-btn');
+    // const tabs = document.querySelectorAll('.tab');
+    // const goBackBtn = document.getElementById('go-back-btn');
     
     // City search
     searchBtn.addEventListener('click', () => {
